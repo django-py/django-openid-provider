@@ -1,11 +1,16 @@
 import os
-from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
-    README = readme.read()
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+readme = open('README.rst').read()
+
+requirements = ['pyjwt>=0.3.1']
+requirements_test = []
 
 setup(
     name='django-openid-provider',
@@ -14,7 +19,7 @@ setup(
     include_package_data=True,
     license='MIT License',
     description='A simple OpenID Connect Provider implementation for Djangonauts.',
-    long_description=README,
+    long_description=readme,
     url='http://github.com/juanifioren/django-openid-provider',
     author='Juan Ignacio Fiorentino',
     author_email='juanifioren@gmail.com',
@@ -30,7 +35,5 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
-    install_requires=[
-        'pyjwt==0.3.1',
-    ],
+    install_requires=requirements
 )
