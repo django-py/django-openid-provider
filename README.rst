@@ -10,6 +10,9 @@ Important things that you should know:
 - This cover ``authorization_code`` flow and ``implicit`` flow, NO support for ``hybrid`` flow at this moment.
 - Only support for requesting Claims using Scope Values.
 
+.. image:: https://api.travis-ci.org/nicchub/django-openid-provider.png?branch=master
+   :target: https://travis-ci.org/nicchub/django-openid-provider
+
 ************
 Installation
 ************
