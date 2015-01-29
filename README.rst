@@ -1,5 +1,5 @@
 
-.. image:: http://s1.postimg.org/qcm2dtr6n/title.png
+.. image:: https://github.com/nicchub/django-openid-provider/blob/adding_tests/openid_provider/docs/images/openid-connect-logo.png
 ####################################################
 
 **This project is in ALFA version and is rapidly changing. DO NOT USE IT FOR PRODUCTION SITES.**
